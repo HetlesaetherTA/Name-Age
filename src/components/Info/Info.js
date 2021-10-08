@@ -7,8 +7,10 @@ const Info = (props) => {
         {props.items.map((info) => (
           <InfoElement
             key={info.id}
+            id={info.id}
             username={info.username}
             age={info.age}
+            onDelete={props.onDeleteData}
           />
         ))}
     </div>

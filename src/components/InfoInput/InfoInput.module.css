@@ -26,3 +26,12 @@
     display: inline;
     color: red;
 }
+
+.infoInput__hidden {
+    display: none;
+}
+
+.infoInput.invalid {
+    border-color: red;
+    background-color: salmon;
+}

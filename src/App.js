@@ -7,6 +7,12 @@ import InfoInput from "./components/InfoInput/InfoInput";
 function App(props) {
   const [inputData, setInputData] = useState([]);
 
+  const deleteItemHandler = dataID => {
+    setInputData(prevInputData => {
+      const updatedInputData = prevInputData.filter(data => data.id !== dataID);
+      return updatedInputData;
+    })
+  }
   const addInputDataHandler = (inputData) => {
     setInputData((prevInputData) => {
       return [inputData, ...prevInputData];
@@ -17,7 +23,7 @@ function App(props) {
   
 
   if (inputData.length > 0) {
-    content = <Info items={inputData}/>
+    content = <Info items={inputData} onDeleteData={deleteItemHandler}/>
   }
 
   return (
