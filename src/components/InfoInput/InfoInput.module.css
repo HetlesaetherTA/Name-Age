@@ -1,0 +1,28 @@
+.infoInput label, input {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.infoInput label {
+    font-weight: 700;
+
+}
+
+.infoInput input {
+    border: solid 1px #ccc;
+    width: 100%;
+    padding: 0.15rem;
+
+}
+
+.infoInput input:focus {
+    outline: none;
+    border-color: #4f005f;
+}
+
+.infoInput__errorMessage {
+    margin-left: 5px;
+    font-size: 0.5rem;
+    display: inline;
+    color: red;
+}
